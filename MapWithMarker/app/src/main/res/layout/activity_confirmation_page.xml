@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmationPage"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/input_roundedcorner"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="20dp"
+                android:text="Please enter estimated number of people:"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="20sp"
+                android:textColor="@color/cardview_light_background"/>
+
+            <com.example.mapwithmarker.MySeekbar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:min="10"
+                android:max="100"
+                android:hapticFeedbackEnabled="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="20dp"
+                android:text="Could you inform us more."
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="20sp"
+                android:textColor="@color/cardview_light_background"/>
+
+
+            <RelativeLayout
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/parent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/record_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/record_button"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Tap the mic to speak"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textSize="20sp"
+                    android:textColor="@color/cardview_light_background"
+                    />
+
+
+                <com.devlomi.record_view.RecordView
+                    android:id="@+id/record_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/record_button"
+                    app:slide_to_cancel_arrow="@drawable/recv_ic_arrow"
+                    app:slide_to_cancel_arrow_color="@color/common_google_signin_btn_text_dark_default"
+                    app:slide_to_cancel_bounds="8dp"
+                    app:slide_to_cancel_margin_right="10dp"
+                    app:slide_to_cancel_text="Slide To Cancel"
+                    app:counter_time_color="@color/common_google_signin_btn_text_dark_default"
+                    />
+
+                <com.devlomi.record_view.RecordButton
+                    android:id="@+id/record_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/recv_bg_mic"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:scaleType="centerInside"
+                    app:mic_icon="@drawable/recv_ic_mic_white" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/button_proceed"
+        android:text="Continue"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="20sp"
+        android:textColor="@color/cardview_light_background"
+        android:background="@drawable/input_roundedcorner"
+        />
+
+
+</LinearLayout>
